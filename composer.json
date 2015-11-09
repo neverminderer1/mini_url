@@ -15,7 +15,8 @@
         "php": "5.6.*",
         "phpunit/phpunit": "4.7.7",
         "ua-parser/uap-php": "*",
-        "tabgeo/country": "*"
+        "tabgeo/country": "*",
+        "miniurl/miniurl": "*"
     },
     "autoload":{
         "psr-4":{

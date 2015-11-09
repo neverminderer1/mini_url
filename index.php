@@ -1,6 +1,6 @@
 <?php
-
 require_once 'vendor/autoload.php';
+require_once 'autoloader.php';
 
 define("MINI_URL", $_POST['miniUrl']);
 define("LONG_URL", $_POST['longUrl']);
