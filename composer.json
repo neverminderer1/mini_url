@@ -1,0 +1,25 @@
+{
+    "name": "miniurl/miniurl",
+    "type": "library",
+    "description": "Customize your URL",
+    "homepage": "https://github.com/Seldaek/monolog",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evhenii Baranov",
+            "email": "baranov.evgenij@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require":{
+        "php": "5.6.*",
+        "phpunit/phpunit": "4.7.7",
+        "ua-parser/uap-php": "*",
+        "tabgeo/country": "*"
+    },
+    "autoload":{
+        "psr-4":{
+            "Redirect\\Tools\\": "src/"
+        }   
+    }
+}

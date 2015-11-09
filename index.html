@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Minimizer</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <style type="text/css">
+            #centerLayer {
+             width: 400px; /* Ширина слоя в пикселах */
+             background: #fc0; /* Цвет фона */
+             padding: 10px; /* Поля вокруг текста */
+             text-align: center;
+             margin-top: 10%;
+             margin-left: 20%
+            }
+           </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div id="centerLayer"> 
+            <form method="post" id="formx" action="javascript:void(null);" onsubmit="call()">
+            <div class="form-group has-success">                              
+                <input type="url" class="form-control" name="longUrl" placeholder="Введите ссылку" required>
+            </div>
+            <div class="form-group has-success">              
+                <input type="text" class="form-control" placeholder="Введите короткое название" name="miniUrl" required>
+            </div>
+             <div class="form-group has-success">                
+                <input type="number" class="form-control" placeholder="Введите время жизни в часах" name="lifetime">
+            </div>
+                <p>
+                    <button type="Submit" class="btn btn-primary">Принять</button>
+                </p>
+                <label id="output"></label>
+            </form>
+            </div>         
+        </div>      
+        <script>
+            function call() {
+                var msg   = $('#formx').serialize();
+                  $.ajax({
+                    type: 'POST',
+                    url: 'index.php',
+                    data: msg,
+                    success: function(data) {
+                      $('#output').text(data);
+                    },
+                    error:  function(xhr){
+                          alert('Возникла ошибка: ' + xhr.responseCode);
+                      }
+                  });                 
+              }     
+        </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+         
+    </body>
+</html>
