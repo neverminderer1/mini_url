@@ -29,10 +29,10 @@ class Datasource {
 }
 $pdo = new Redirect\Tools\Connect();
 $lil = new Datasource($pdo);
-$browser = $lil->getDataForChart('browser', 'f');
-$device = $lil->getDataForChart('device', 'f');
-$geo = $lil->getDataForChart('country', 'f');
-$os = $lil->getDataForChart('os', 'f');
+$browser = $lil->getDataForChart('browser', 'miniurl');
+$device = $lil->getDataForChart('device', 'miniurl');
+$geo = $lil->getDataForChart('country', 'miniurl');
+$os = $lil->getDataForChart('os', 'miniurl');
 
 
 
