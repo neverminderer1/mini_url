@@ -16,7 +16,7 @@ use Exception;
 class DbQueries 
 {
 
-    private $table = "temp_test";
+    private $table = "mini_table";
     public $mini;
     public $long;
     protected $dbh;

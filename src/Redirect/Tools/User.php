@@ -7,7 +7,7 @@ namespace Redirect\Tools;
  */
 class User{
     
-    private $table = 'click_statistic';
+    private $table = 'user_data';
     protected $country;
     protected $userAgentData;
     protected $pdo;
